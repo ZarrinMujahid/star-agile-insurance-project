@@ -1,7 +1,7 @@
 def containerName="Insurance"
 def tag="latest"
 def dockerHubUser="zarrinmujahid"
-def gitURL="https://github.com/ZarrinMujahid/star-agile-insurance-project-care "
+def gitURL="https://github.com/ZarrinMujahid/star-agile-insurance-project "
 
 node {
 
