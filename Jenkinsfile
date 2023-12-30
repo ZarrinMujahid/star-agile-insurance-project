@@ -33,11 +33,11 @@ node {
 	stage("Kubernetes Deployment"){
 		sh "kubectl get pods -o wide"
 	}
-	stage("Run docker image"){
+       /*	stage("Run docker image"){
          sh "docker run -d -p 8082:8082 $containerName:$tag"
 	}
 	
-	/*stage("Ansible Deploy"){
+	stage("Ansible Deploy"){
         ansiblePlaybook inventory: 'hosts', playbook: 'ansible-playbook.yml'
     }*/
 }
