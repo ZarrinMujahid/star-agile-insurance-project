@@ -31,7 +31,7 @@ node {
         }
     }
 	stage("Kubernetes Deployment"){
-		sh "Kubctl get pods-o wide"
+		sh "Kubectl get pods-o wide"
 	}
 	stage("Run docker image"){
          sh "docker run -d -p 8082:8082 $containerName:$tag"
