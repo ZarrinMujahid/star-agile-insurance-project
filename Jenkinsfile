@@ -1,4 +1,4 @@
-def containerName="Insurance"
+def containerName="insurance"
 def tag="latest"
 def dockerHubUser="zarrinmujahid"
 def gitURL="https://github.com/ZarrinMujahid/star-agile-insurance-project "
