@@ -32,9 +32,11 @@ node {
     }
 	stage("Kubernetes Deployment"){
 		sh "kubectl get pods -o wide"
+		sh"kubctl apply -f deployment.yml
+		
 	}
        /*	stage("Run docker image"){
-         sh "docker run -d -p 8082:8082 $containerName:$tag"
+               sh "docker run -d -p 8082:8082 $containerName:$tag"
 	}
 	
 	stage("Ansible Deploy"){
