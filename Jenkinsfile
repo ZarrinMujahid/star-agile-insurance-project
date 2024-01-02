@@ -32,7 +32,7 @@ node {
     }
 	stage("Kubernetes Deployment"){
 		sh "kubectl get pods -o wide"
-		sh"kubctl apply -f deployment.yml
+		sh "kubectl apply -f deployment.yml"
 		
 	}
        /*	stage("Run docker image"){
