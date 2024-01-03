@@ -1,17 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: insurance
+  name: jenkins
+  labels:
+    product: cicd
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: insurance
+      app: jenkins
+      tier: web
   template:
     metadata:
       labels:
-        app: insurance
+        app: jenkins
+        tier: web
     spec:
       containers:
-      - name: insurance
-        image: insurance:latest
+      - name: jenkins-container
+        image: insurance:lts
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:  
+            cpu: 1000m
+            memory: 600Mi             
+          requests: 
+            cpu: 500m
+            memory: 300Mi
