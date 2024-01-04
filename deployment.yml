@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: jenkins-container
-        image: insurance:lts
+        image: zarrinmujahid/insurance:lts
         ports:
         - containerPort: 8080
         resources:
