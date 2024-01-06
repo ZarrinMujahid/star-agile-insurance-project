@@ -9,6 +9,7 @@ spec:
         targetPort: 8090
     type: NodePort
     selector:
-      app: ais
-      tier: web
+         app: ais
+         tier: web
  ---
+ 
