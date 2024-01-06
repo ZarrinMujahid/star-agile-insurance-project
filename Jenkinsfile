@@ -32,6 +32,7 @@ node {
     }
 	stage("Kubernetes Deployment"){
 		sh "kubectl get pods -o wide"
+		sh "kubectl apply -f service.yml"
 		sh "kubectl apply -f deployment.yml"
 		
 	}
