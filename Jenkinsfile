@@ -39,7 +39,7 @@ node {
                sh "docker run -d -p 8082:8082 $containerName:$tag"
 	}
 	
-	/*stage("Ansible Deploy"){
-        ansiblePlaybook inventory: 'hosts', playbook: 'ansible-playbook.yml'
-    }*/
+	  stage('Configure and Deploy to the test-server'){
+        ansiblePlaybook become: true, credentialsId: 'ansible-key', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible-playbook.yml'
+    }
 }
